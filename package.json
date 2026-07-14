@@ -2,7 +2,7 @@
   "name": "randspy",
   "version": "0.1.0",
   "description": "Traces Date, Math.random, env, and iteration-order reads to expose hidden nondeterminism in tests.",
-  "author": "JaydenCJ",
+  "author": "JaydenCJ <aisingioro.kiyon@gmail.com>",
   "license": "MIT",
   "type": "module",
   "bin": {
