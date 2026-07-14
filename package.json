@@ -1,0 +1,54 @@
+{
+  "name": "randspy",
+  "version": "0.1.0",
+  "description": "Traces Date, Math.random, env, and iteration-order reads to expose hidden nondeterminism in tests.",
+  "author": "JaydenCJ",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "randspy": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./register": "./dist/register.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"tests/*.test.mjs\"",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "flaky-tests",
+    "nondeterminism",
+    "determinism",
+    "testing",
+    "tracer",
+    "entropy",
+    "cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/randspy.git"
+  },
+  "homepage": "https://github.com/JaydenCJ/randspy#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/randspy/issues"
+  }
+}
